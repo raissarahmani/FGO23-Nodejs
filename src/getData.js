@@ -15,6 +15,6 @@ const weatherCheck = (city) => {
         if(err instanceof Error) console.log(err.message)
     })
 }
-weatherCheck()
+// weatherCheck()
 
 export default weatherCheck

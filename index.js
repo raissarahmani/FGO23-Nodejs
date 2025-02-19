@@ -1,7 +1,10 @@
-import {weatherCheck} from "./src/getData.js"
+import weatherCheck from "./src/getData.js";
 
-const dataCheck = () => {
+const dataCheck = (city) => {
     if(typeof city !== "string") return
-    if(!(weatherCheck instanceof Array)) return
+    const cityData = weatherCheck(city)
+    // if(!(weatherCheck instanceof Array)) return
+    console.log(`Data cuaca di ${city}: ${cityData}`)
 }
-dataCheck(weatherCheck)
+dataCheck("makassar")
+

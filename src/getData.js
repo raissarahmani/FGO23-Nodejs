@@ -3,6 +3,7 @@ const API = "https://api.openweathermap.org/data/2.5/weather?q="
 
 const weatherCheck = (city) => {
     const url = `${API}${city}&appid=${API_KEY}`
+    console.log(url);
     fetch (url)
     .then((response) => {
         if (!response.ok) throw new Error(response.statusText)
@@ -15,6 +16,6 @@ const weatherCheck = (city) => {
         if(err instanceof Error) console.log(err.message)
     })
 }
-weatherCheck("padang")
+weatherCheck()
 
 export default weatherCheck
